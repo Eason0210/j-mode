@@ -141,8 +141,7 @@ It groups the objects in LIST according to the predicate FN"
   (let ((dic (j-help-valid-dictionary)))
     (if (or (not alist-data) (string= dic ""))
         (error "%s" "No dictionary found. Please specify a dictionary.")
-      (let ((name (car alist-data))
-            (doc-name (cdr alist-data)))
+      (let ((doc-name (cdr alist-data)))
         (format "%s/%s.%s" dic doc-name "htm")))))
 
 (defun j-help-symbol-to-doc-url ( j-symbol )
